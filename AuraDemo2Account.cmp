@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable" controller="AuraDemo2OnAccount">
+<aura:attribute name ="accExternalId" type = "String" default ="0015j00001QebyJAAR"></aura:attribute>
+<aura:attribute name ="AccountRecord" type = "Account"></aura:attribute>
+    <lightning:card footer="Naresh SFD" title="Account Records">
+    
+    <p class="slds-p-horizontal_small">
+        Account Name : {!v.AccountRecord.Name}<br/>
+        Account Id : {!v.AccountRecord.Id}<br/>
+        Account Phone : {!v.AccountRecord.Phone}<br/>
+        Account Description : {!v.AccountRecord.Description}<br/>
+    </p>
+    </lightning:card>
+<div>
+<lightning:button label="display account" 
+                  variant="success"
+                  title="account records" 
+                  onclick="{! c.getAccountRecords }"/>
+</div>
+</aura:component>

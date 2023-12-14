@@ -1,0 +1,16 @@
+<aura:component>
+	<aura:attribute name = "firstName" type = "String" default ="Naresh"></aura:attribute>
+    <aura:attribute name = "lastName" type = "String" ></aura:attribute>
+    <aura:attribute name="age" type ="String" ></aura:attribute>
+    <aura:attribute name="salary" type ="String" ></aura:attribute>
+    
+    <aura:handler name = "init" value = "{!this}" action = "{!c.onClickAction}"/>
+    my firstName is : {!v.firstName}<br/>
+    my lasName is : {!v.lastName}<br/>
+    my age is : {!v.age}<br/>
+    my salary is : {!v.salary}
+     <lightning:button variant="brand"
+                       label="salary" 
+                       title="display salary"
+                       onclick="{!c.handleClick}" />
+</aura:component>

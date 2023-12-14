@@ -1,0 +1,15 @@
+<aura:component controller ="AuraDemo3onAccountAndContacts"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name ="contacts" type ="Contact[]" />
+    
+    <aura:handler name ="init" value ="{!this}" action ="{!c.getAccountRelatedContacts}"/>
+    <div>
+        <h1>Top 3 Account Related Contacts</h1>
+        <ul>
+            <aura:iteration items ="{!v.contacts}" var ="contact">
+                <li>{!contact.Name} {!contact.Id}</li>
+            </aura:iteration>
+        </ul>
+    </div>
+	
+</aura:component>
